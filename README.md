@@ -1,4 +1,5 @@
-# 🌴 Holiday Package Prediction using Random Forest Classification
+<h1 align="center">🌴 Holiday Package Prediction 🌴</h1>
+<h3 align="center">With Random Forest Classification</h3>
 
 <p align="center">
   <img src="images/holiday_package_prediction.gif" alt="Holiday Package Prediction" width="800"/>
@@ -100,11 +101,11 @@ The dataset is sourced from [Kaggle — Holiday Package Purchase Prediction](htt
 
 ## 📈 Exploratory Data Analysis
 
-### Feature Distributions
-![Feature Distributions](images/feature_distributions.png)
-
-### Correlation Heatmap
-![Correlation Heatmap](images/correlation_heatmap.png)
+<p align="center">
+  <img src="images/feature_distributions.png" alt="Feature Distributions" width="48%"/>
+  &nbsp;
+  <img src="images/correlation_heatmap.png" alt="Correlation Heatmap" width="48%"/>
+</p>
 
 **Key Insights:**
 - `Passport` has the strongest positive correlation with purchase (0.26)
@@ -154,11 +155,11 @@ RandomForestClassifier(
 
 ## 📉 Model Results
 
-### Confusion Matrix
-![Confusion Matrix](images/confusion_matrix.png)
-
-### Feature Importance
-![Feature Importance](images/feature_importance.png)
+<p align="center">
+  <img src="images/confusion_matrix.png" alt="Confusion Matrix" width="48%"/>
+  &nbsp;
+  <img src="images/feature_importance.png" alt="Feature Importance" width="48%"/>
+</p>
 
 **Classification Report:**
 ```
@@ -253,7 +254,7 @@ I'm on my machine learning journey — building, experimenting and documenting a
 ## 🙏 Acknowledgements
 Thanks to **Krish Naik Sir** whose Udemy course has been a great resource throughout this learning journey.
 
-*"The best way to learn is to do."*
+*"Not all those who wander are lost." — J.R.R. Tolkien*
 
 ---
 
