@@ -257,7 +257,7 @@ I'm on my machine learning journey — building, experimenting and documenting a
 ## 🙏 Acknowledgements
 Thanks to **Krish Naik Sir** whose Udemy course has been a great resource throughout this learning journey.
 
-*"The best way to learn is to do."*
+*"Not all those who wander are lost." — J.R.R. Tolkien*
 
 ---
 
