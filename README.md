@@ -251,10 +251,13 @@ jupyter notebook Holiday_Package_Prediction.ipynb
 ## 🙋 About
 I'm on my machine learning journey — building, experimenting and documenting as I go. Every notebook here represents something I've genuinely tried to understand, not just run. 🚀
 
+- GitHub: [@AnmolPatel20](https://github.com/AnmolPatel20)
+- Portfolio: [anmolpatel20.github.io/Anmol_Portfolio](https://anmolpatel20.github.io/Anmol_Portfolio/)
+
 ## 🙏 Acknowledgements
 Thanks to **Krish Naik Sir** whose Udemy course has been a great resource throughout this learning journey.
 
-*"Not all those who wander are lost." — J.R.R. Tolkien*
+*"The best way to learn is to do."*
 
 ---
 
